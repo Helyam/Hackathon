@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-class EggController extends AbstractController
+class UserController extends AbstractController
 {
 	
 }
