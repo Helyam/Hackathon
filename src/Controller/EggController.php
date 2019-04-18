@@ -12,13 +12,12 @@ class EggController extends AbstractController
 {
 	public function showEgg() 
 	{
-		$client = new \GuzzleHttp\Client(['base_uri' => 'https://easteregg.wildcodeschool.fr/api/']	);
+		$client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']	);
 		// Send a request to https://foo.com/api/test
 		$response = $client->request('GET', 'eggs');
 		$body = $response->getBody();
 		$body = $body->getContents();
-		echo $body->getContents();
-		var_dump($body);
+        json_decode($body);
 		// or
 		// Send request https://foo.com/api/test?key=maKey&name=toto
 
