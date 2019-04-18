@@ -10,7 +10,7 @@ namespace App\Controller;
 
 class EggController extends AbstractController
 {
-	public function showEgg() 
+	public function showEggRandom() 
 	{
 		$client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']	);
 		// Send a request to https://foo.com/api/test
