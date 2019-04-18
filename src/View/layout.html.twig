@@ -1,11 +1,7 @@
 <!doctype html>
 <html lang="fr">
-<<<<<<< HEAD
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-=======
+
+
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
->>>>>>> f910d7943743997afa906b50bf0dce9d4a01c733
 
         <title>{% block title %}{% endblock %}</title>
 
@@ -28,28 +23,8 @@
         <link rel="icon" href="/assets/images/favicon.png">
     </head>
 
-<<<<<<< HEAD
     <body>
-        {% if connected == true %}
-            <button onclick="window.location.href='logout';" class="btn btn-info btn-block">Log out</button>
-        {% endif %}
-        {% block content %}{% endblock %}
-
-        <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="/assets/js/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="/assets/js/mdb.js"></script>
-
-        {% block javascript %}{% endblock %}
-
-    </body>
-</html>
-=======
-<body>
-    <header>
+        <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">ggumble</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -71,10 +46,21 @@
             </div>
         </nav>
     </header>
-    {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
-    <!-- Footer -->
-    <footer class="page-footer font-small bg-grey pt-4">
+        {% if connected == true %}
+            <button onclick="window.location.href='logout';" class="btn btn-info btn-block">Log out</button>
+        {% endif %}
+        {% block content %}{% endblock %}
+
+        <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="/assets/js/mdb.js"></script>
+
+        {% block javascript %}{% endblock %}
+        <footer class="page-footer font-small bg-grey pt-4">
         <div class="container-fluid text-center text-md-left">
             <div class="row">
                 <div class="col-xs-12 col-md-2 offset-md-1">
@@ -121,7 +107,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-</body>
->>>>>>> f910d7943743997afa906b50bf0dce9d4a01c733
+    </body>
+</html>
 
 </html>
