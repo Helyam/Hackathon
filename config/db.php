@@ -14,6 +14,12 @@
  */
 
 define('APP_DB_USER', 'root');
+<<<<<<< HEAD
 define('APP_DB_PWD', 'mlkjhgfdsq4988');
 define('APP_DB_HOST', 'localhost');
 define('APP_DB_NAME', 'eventeam');
+=======
+define('APP_DB_PWD', '7SNQY;7n8');
+define('APP_DB_HOST', 'localhost');
+define('APP_DB_NAME', 'hackathon');
+>>>>>>> f910d7943743997afa906b50bf0dce9d4a01c733

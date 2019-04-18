@@ -1,2 +1,7 @@
-vendor
+
+/temp/*
+.phpcs-cache
+*.cache
 db.php
+
+/vendor/

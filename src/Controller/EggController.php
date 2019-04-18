@@ -10,21 +10,18 @@ namespace App\Controller;
 
 class EggController extends AbstractController
 {
-	public function showEggRandom() 
-	{
-		$client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']	);
-		// Send a request to https://foo.com/api/test
-		$response = $client->request('GET', 'eggs/random');
-		$body = $response->getBody();
-		$body = $body->getContents();
+    public function showEggRandom()
+    {
+        $client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']);
+        // Send a request to https://foo.com/api/test
+        $response = $client->request('GET', 'eggs/random');
+        $body = $response->getBody();
+        $body = $body->getContents();
         $egg = json_decode($body);
-        var_dump(json_decode($body));
-		// or
-		// Send request https://foo.com/api/test?key=maKey&name=toto
+        // or
+        // Send request https://foo.com/api/test?key=maKey&name=toto
 
-		return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
-	}
-
+<<<<<<< HEAD
 	public function loki()
 	{
 		$client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']	);
@@ -37,4 +34,8 @@ class EggController extends AbstractController
 
         return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
 	}
+=======
+        return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
+    }
+>>>>>>> f910d7943743997afa906b50bf0dce9d4a01c733
 }
