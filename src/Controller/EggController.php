@@ -14,14 +14,15 @@ class EggController extends AbstractController
 	{
 		$client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']	);
 		// Send a request to https://foo.com/api/test
-		$response = $client->request('GET', 'eggs');
+		$response = $client->request('GET', 'eggs/random');
 		$body = $response->getBody();
 		$body = $body->getContents();
-        json_decode($body);
+        $egg = json_decode($body);
+        var_dump(json_decode($body));
 		// or
 		// Send request https://foo.com/api/test?key=maKey&name=toto
 
-		return $this->twig->render('Egg/egg.html.twig', ['tableau' => $body]);
+		return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
 	}
 
 }
