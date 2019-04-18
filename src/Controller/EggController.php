@@ -25,4 +25,16 @@ class EggController extends AbstractController
 		return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
 	}
 
+	public function loki()
+	{
+		$client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']	);
+		$response = $client->request('GET', 'eggs/5cac51240d488f0da6151bce', [
+       'loki'  => '1',
+   		]);
+   		$body = $response->getBody();
+		$body = $body->getContents();
+        $egg = json_decode($body);
+
+        return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
+	}
 }
