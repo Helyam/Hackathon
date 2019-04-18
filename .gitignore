@@ -1,7 +1,3 @@
-
-/temp/
+vendor
+config/db.php
 .phpcs-cache
-.cache
-db.php
-
-/vendor/
