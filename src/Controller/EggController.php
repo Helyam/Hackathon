@@ -10,19 +10,17 @@ namespace App\Controller;
 
 class EggController extends AbstractController
 {
-	public function showEggRandom() 
-	{
-		$client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']	);
-		// Send a request to https://foo.com/api/test
-		$response = $client->request('GET', 'eggs/random');
-		$body = $response->getBody();
-		$body = $body->getContents();
+    public function showEggRandom()
+    {
+        $client = new \GuzzleHttp\Client(['base_uri' => 'http://easteregg.wildcodeschool.fr/api/']);
+        // Send a request to https://foo.com/api/test
+        $response = $client->request('GET', 'eggs/random');
+        $body = $response->getBody();
+        $body = $body->getContents();
         $egg = json_decode($body);
-        var_dump(json_decode($body));
-		// or
-		// Send request https://foo.com/api/test?key=maKey&name=toto
+        // or
+        // Send request https://foo.com/api/test?key=maKey&name=toto
 
-		return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
-	}
-
+        return $this->twig->render('Egg/egg.html.twig', ['tableau' => $egg]);
+    }
 }
